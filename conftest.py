@@ -2,19 +2,20 @@ import pytest
 import requests
 from config.settings import BASE_URL, USERNAME, PASSWORD
 
+LOGIN_ENDPOINT = f"{BASE_URL}/users/login"
+
+VALID_CREDENTIALS = {
+    "email": f"{USERNAME}",
+    "password": f"{PASSWORD}"
+}
+
 
 # Define the auth_token fixture
 @pytest.fixture
 def auth_token():
-    # Define the login URL based on the base URL from config
-    url = f'{BASE_URL}/login'
-    data = {
-        'username': USERNAME,
-        'password': PASSWORD
-    }
 
     # Send login request and get the token
-    response = requests.post(url, data=data)
+    response = requests.post(LOGIN_ENDPOINT, json=VALID_CREDENTIALS)
 
     # Assert the login was successful (status code 200)
     assert response.status_code == 200, f"Login failed: {response.text}"
