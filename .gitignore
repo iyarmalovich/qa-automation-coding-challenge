@@ -1,6 +1,9 @@
 # Ignore log files
 logs/*.log
 
+report.html
+tests/report.html
+
 # Allow placeholder files in the logs directory
 !logs/README.md
 
