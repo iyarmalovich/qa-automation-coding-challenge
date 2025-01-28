@@ -5,6 +5,10 @@ It includes fixtures for authentication, configuration for pytest, and example t
 
 
 ## How to run
+- python3 -m venv venv
+- source venv/bin/activate
+- pip install -r requirements.txt
+- playwright install
 - set `.env` file 
 - `pytest --html=report.html --self-contained-html`
 
