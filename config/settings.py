@@ -1,8 +1,12 @@
-# Base URL for the API
-BASE_URL = "https://thinking-tester-contact-list.herokuapp.com/"
+import os
+from dotenv import load_dotenv
 
-USERNAME = "test-username"
-PASSWORD = "test-password"
+BASE_URL = "https://thinking-tester-contact-list.herokuapp.com"
+
+
+load_dotenv(".env")
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
 
 # Logging configuration
 LOGGING_CONFIG = {

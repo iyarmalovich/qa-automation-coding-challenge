@@ -3,6 +3,12 @@
 This project provides a pytest-based testing framework for API testing. 
 It includes fixtures for authentication, configuration for pytest, and example tests.
 
+
+## How to run
+- set `.env` file 
+- `pytest --html=report.html --self-contained-html`
+
+
 ## Features
 - Automatically retrieves login tokens using a pytest fixture.
 - Configurable through pytest.ini.
